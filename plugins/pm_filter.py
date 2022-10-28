@@ -3,6 +3,7 @@ import asyncio
 import re
 import ast
 import math
+from utils import get_shortlink
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 import pyrogram
@@ -436,7 +437,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/channel/UCqts9WhhlioK3RB9XQQzoAg'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='{script.HOME_BUTTONURL_UPDATES')
+            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/sources_cods')
         ], [
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
@@ -872,5 +873,6 @@ async def manual_filters(client, message, text=False):
                 break
     else:
         return False
+   
     
     #AM_ROBOTS
