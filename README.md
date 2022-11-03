@@ -151,5 +151,5 @@ Fork the repo and edit as per your needs.
 Licensed under [GNU AGPL 2.0.](https://github.com/AM-ROBOTS/AdvAnurag/blob/main/LICENSE)
 Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 
-## Inspiration
-🙃
+## Contact Support 
+🙃[Support](https://telegram.dog/Technical_Help_Support_Bot)
