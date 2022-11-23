@@ -844,7 +844,8 @@ async def manual_filters(client, message, text=False):
                                 group_id, 
                                 reply_text, 
                                 disable_web_page_preview=True,
-                                reply_to_message_id=reply_id)
+                                reply_to_message_id=reply_id
+                            )
                       if SELF_DELETE:
                          await asyncio.sleep(SELF_DELETE_SECONDS)
                          await hmm.delete()
