@@ -834,52 +834,52 @@ async def manual_filters(client, message, text=False):
 
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
-                
+
             if btn is not None:
                 try:
                     if fileid == "None":
                         if btn == "[]":
                             hehe = await client.send_message(
                                 group_id,
-                                reply_text,
+                                reply_text, 
                                 disable_web_page_preview=True,
                                 reply_to_message_id=reply_id)
                             if SELF_DELETE:
                                 await asyncio.sleep(SELF_DELETE_SECONDS)
-                                await hehe.delete()
+                                await hehe.delete()       
+                        else:
+                            button = eval(btn)
+                            hmm = await client.send_message(
+                                group_id,
+                                reply_text,
+                                disable_web_page_preview=True,
+                                reply_markup=InlineKeyboardMarkup(button),
+                                reply_to_message_id=reply_id
+                            )
+                            if SELF_DELETE:
+                                await asyncio.sleep(SELF_DELETE_SECONDS)
+                                await hmm.delete()
+                    elif btn == "[]":
+                        fuk = await client.send_cached_media(
+                            group_id,
+                            fileid,
+                            caption=reply_text or "",
+                            reply_to_message_id=reply_id
+                        )
+                        if SELF_DELETE:
+                            await asyncio.sleep(SELF_DELETE_SECONDS)
+                            await fuk.delete()
                     else:
                         button = eval(btn)
-                        hmm = await client.send_message(
-                            group_id,
-                            reply_text,
-                            disable_web_page_preview=True,
+                        fek = await message.reply_cached_media(
+                            fileid,
+                            caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
                         if SELF_DELETE:
                             await asyncio.sleep(SELF_DELETE_SECONDS)
-                            await hmm.delete()      
-                elif btn == "[]":
-                    fek = await client.send_cached_media(
-                        group_id,
-                        fileid,
-                        caption=reply_text or "",
-                        reply_to_message_id=reply_id
-                    )
-                     if SELF_DELETE:
-                         await asyncio.sleep(SELF_DELETE_SECONDS)
-                         await fek.delete()      
-                else:
-                    button = eval(btn)
-                    fuk = await message.reply_cached_media(
-                        fileid,
-                        caption=reply_text or "",
-                        reply_markup=InlineKeyboardMarkup(button),
-                        reply_to_message_id=reply_id
-                    )
-                    if SELF_DELETE:
-                        await asyncio.sleep(SELF_DELETE_SECONDS)
-                        await fuk.delete()
+                            await fek.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
