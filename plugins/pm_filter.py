@@ -835,10 +835,10 @@ async def manual_filters(client, message, text=False):
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
 
-            if btn is not None:
-                try:
-                    if fileid == "None":
-                        if btn == "[]":
+         if btn is not None:
+             try:
+                 if fileid == "None":
+                   if btn == "[]":
                      hehe = await client.send_message(group_id,reply_text,disable_web_page_preview=True,reply_to_message_id=reply_id)          
                      if SELF_DELETE:
                         await asyncio.sleep(SELF_DELETE_SECONDS)
