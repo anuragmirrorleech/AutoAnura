@@ -859,16 +859,16 @@ async def manual_filters(client, message, text=False):
                         if SELF_DELETE:
                             await asyncio.sleep(SELF_DELETE_SECONDS)
                             await hmm.delete()      
-                elif btn == "[]":
-                    fek = await client.send_cached_media(
-                        group_id,
-                        fileid,
-                        caption=reply_text or "",
-                        reply_to_message_id=reply_id
-                    )
-                    if SELF_DELETE:
-                        await asyncio.sleep(SELF_DELETE_SECONDS)
-                        await fek.delete()      
+                   elif btn == "[]":
+                       fek = await client.send_cached_media(
+                           group_id,
+                           fileid,
+                           caption=reply_text or "",
+                           reply_to_message_id=reply_id
+                       )
+                        if SELF_DELETE:
+                            await asyncio.sleep(SELF_DELETE_SECONDS)
+                            await fek.delete()      
                 else:
                     button = eval(btn)
                     fuk = await message.reply_cached_media(
