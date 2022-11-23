@@ -859,7 +859,7 @@ async def manual_filters(client, message, text=False):
                         if SELF_DELETE:
                             await asyncio.sleep(SELF_DELETE_SECONDS)
                             await hmm.delete()      
-                 elif btn == "[]":
+                elif btn == "[]":
                     fek = await client.send_cached_media(
                         group_id,
                         fileid,
@@ -868,7 +868,7 @@ async def manual_filters(client, message, text=False):
                     )
                     if SELF_DELETE:
                         await asyncio.sleep(SELF_DELETE_SECONDS)
-                        await fek.delete()
+                        await fek.delete()      
                 else:
                     button = eval(btn)
                     fuk = await message.reply_cached_media(
