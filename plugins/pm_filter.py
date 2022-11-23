@@ -55,11 +55,11 @@ async def fil_mod(client, message):
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
-    await asyncio.sleep(8)
-    await k.delete(8)
     if k == False:
         await auto_filter(client, message)
-
+    if SELF_DELETE:
+                await asyncio.sleep(SELF_DELETE_SECONDS)
+                await k.delete()
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
