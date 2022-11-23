@@ -849,37 +849,37 @@ async def manual_filters(client, message, text=False):
                                 await hlo.delete()
                         else:
                             button = eval(btn)
-                      hmm = await client.send_message(
+                             hmm = await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
-                     if SELF_DELETE:
-                        await asyncio.sleep(SELF_DELETE_SECONDS)
-                        await hmm.delete()
+                             if SELF_DELETE:
+                                await asyncio.sleep(SELF_DELETE_SECONDS)
+                                await hmm.delete()
                     elif btn == "[]":
-                  fek = await client.send_cached_media(
+                          fek = await client.send_cached_media(
                             group_id,
                             fileid,
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
-                 if SELF_DELETE:
-                    await asyncio.sleep(SELF_DELETE_SECONDS)
-                    await fek.delete()
+                         if SELF_DELETE:
+                            await asyncio.sleep(SELF_DELETE_SECONDS)
+                            await fek.delete()
                     else:
                         button = eval(btn)
-                  fuk = await message.reply_cached_media(
+                         fuk = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                 if SELF_DELETE:
-                    await asyncio.sleep(SELF_DELETE_SECONDS)
-                    await fuk.delete()
+                         if SELF_DELETE:
+                            await asyncio.sleep(SELF_DELETE_SECONDS)
+                            await fuk.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
