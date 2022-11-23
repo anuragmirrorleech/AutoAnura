@@ -839,39 +839,27 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                             hlo = await client.send_message(
-                                group_id, 
-                                reply_text, 
-                                disable_web_page_preview=True,
-                                reply_to_message_id=reply_id)
-                             if SELF_DELETE:
-                                await asyncio.sleep(SELF_DELETE_SECONDS)
-                                await hlo.delete()
+                      hlo = await client.send_message(group_id,reply_text,disable_web_page_preview=True,reply_to_message_id=reply_id)
+                      if SELF_DELETE:
+                          await asyncio.sleep(SELF_DELETE_SECONDS)
+                          await hlo.delete()
                         else:
                             button = eval(btn)
-                      hmm = await client.send_message(group_id,reply_text,disable_web_page_preview=True,reply_markup=InlineKeyboardMarkup(button),reply_to_message_id=reply_id)
+                      fuk = await client.send_message(group_id,reply_text,disable_web_page_preview=True,reply_markup=InlineKeyboardMarkup(button),reply_to_message_id=reply_id)
                       if SELF_DELETE:
-                         await asyncio.sleep(SELF_DELETE_SECONDS)
-                         await hmm.delete()           
+                          await asyncio.sleep(SELF_DELETE_SECONDS)
+                          await fuk.delete()
                     elif btn == "[]":
-                          fek = await client.send_cached_media(
-                            group_id,
-                            fileid,
-                            caption=reply_text or "",
-                            reply_to_message_id=reply_id)
-                         if SELF_DELETE:
-                            await asyncio.sleep(SELF_DELETE_SECONDS)
-                            await fek.delete()
+                    hum = await client.send_cached_media(group_id,fileid,caption=reply_text or "",reply_to_message_id=reply_id)
+                    if SELF_DELETE:
+                        await asyncio.sleep(SELF_DELETE_SECONDS)
+                        await hum.delete()
                     else:
                         button = eval(btn)
-                         fuk = await message.reply_cached_media(
-                            fileid,
-                            caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(button),
-                            reply_to_message_id=reply_id)
-                         if SELF_DELETE:
-                            await asyncio.sleep(SELF_DELETE_SECONDS)
-                            await fuk.delete()
+                  hyi = await message.reply_cached_media(fileid,caption=reply_text or "",reply_markup=InlineKeyboardMarkup(button),reply_to_message_id=reply_id)
+                  if SELF_DELETE:
+                      await asyncio.sleep(SELF_DELETE_SECONDS)
+                      await fuk.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
