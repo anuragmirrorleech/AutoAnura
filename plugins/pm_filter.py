@@ -60,7 +60,7 @@ async def give_filter(client, message):
     if SELF_DELETE:
                 await asyncio.sleep(SELF_DELETE_SECONDS)
                 await k.delete()
-
+                
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
