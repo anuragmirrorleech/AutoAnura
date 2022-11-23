@@ -856,10 +856,10 @@ async def manual_filters(client, message, text=False):
                           await fek.delete()
                     else:
                         button = eval(btn)
-                   fuk =   await message.reply_cached_media(fileid,caption=reply_text or "",reply_markup=InlineKeyboardMarkup(button),reply_to_message_id=reply_id)
-                   if SELF_DELETE:
-                      await asyncio.sleep(SELF_DELETE_SECONDS)
-                      await fuk.delete()
+                       fuk =   await message.reply_cached_media(fileid,caption=reply_text or "",reply_markup=InlineKeyboardMarkup(button),reply_to_message_id=reply_id)
+                       if SELF_DELETE:
+                          await asyncio.sleep(SELF_DELETE_SECONDS)
+                          await fuk.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
