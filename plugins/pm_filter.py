@@ -57,9 +57,8 @@ async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
         await auto_filter(client, message)
-    if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
-                await k.delete()
+        await asyncio.sleep(10)
+        await k.delete()
                 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
