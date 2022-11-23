@@ -139,7 +139,7 @@ link - to create link for one post
 ## Thanks to 
  - Thanks To Dan For His Awesome [Library](https://github.com/pyrogram/pyrogram)
  - Thanks To [ᎯℕUℛᎯᎶ](https://telegram.dog/gurubhai11) for Their Awesome [Unlimited Filter Bot](https://t.me/BetterFilters_Ro_Bot) And [AutoFilterBoT](https://github.com/am-robots/Anurag)
- - Thanks To All Everyone In This Journey
+ - Thanks To [AMROBOTS](https://telegram.dog/AM_ROBOTS) for Their Mannual Filter Auto Delete Feature
 
 ### Note
 
@@ -152,4 +152,4 @@ Licensed under [GNU AGPL 2.0.](https://github.com/AM-ROBOTS/AdvAnurag/blob/main/
 Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 
 ## Contact Support 
-🙃[Support](https://telegram.dog/Technical_Help_Support_Bot)
+🙃[Support](https://telegram.dog/AMROBOTS_BOTS)
