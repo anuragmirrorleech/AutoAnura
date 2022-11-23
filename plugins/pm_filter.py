@@ -56,7 +56,7 @@ async def fil_mod(client, message):
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     await asyncio.sleep(8)
-    await k.delete()
+    await k.delete(8)
     if k == False:
         await auto_filter(client, message)
 
