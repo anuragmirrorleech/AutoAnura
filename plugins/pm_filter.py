@@ -847,7 +847,7 @@ async def manual_filters(client, message, text=False):
                             if SELF_DELETE:
                                 await asyncio.sleep(SELF_DELETE_SECONDS)
                                 await hehe.delete()
-                 else:
+               else:
                     button = eval(btn)
                     hmm = await client.send_message(
                         group_id,
